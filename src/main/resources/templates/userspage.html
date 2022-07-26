@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>users page</title>
+</head>
+<body>
+<div th:each="user : ${users}">
+    <h2 th:text="${user.id}"></h2>
+    <p th:text="${user.name}"></p>
+    <!--    <a th:href="@{/user(id=${user.id})}">link1</a>-->
+    <a th:href="@{/user/}+${user.id}">link1</a>
+
+
+</div>
+
+</body>
+</html>
